@@ -2,14 +2,28 @@
 
 source $OPENSHIFT_CARTRIDGE_SDK_BASH
 
-# Clean up any log files
-function tidy() {
-    client_message "Emptying python logs in dir: $OPENSHIFT_LOG_DIR"
-    shopt -s dotglob
-    rm -rf $OPENSHIFT_LOG_DIR/python.log*
+function status() {
+    echo
+}
+
+function update() {
+    echo
+}
+
+function start() {
+    echo
+}
+
+function stop() {
+    echo
+}
+
+function restart() {
+    echo
 }
 
 function build() {
+    echo "Start Python Build"
     if [ -f ${OPENSHIFT_REPO_DIR}requirements.txt ]; then
         echo "Checking for pip dependency listed in ${requirements_file} file.."
         ( cd $OPENSHIFT_REPO_DIR; pip install -r requirements.txt )
@@ -21,9 +35,22 @@ function build() {
     fi
 }
 
+# Clean up any log files
+function tidy() {
+    client_message "Emptying python logs in dir: $OPENSHIFT_LOG_DIR"
+    shopt -s dotglob
+    rm -rf $OPENSHIFT_LOG_DIR/python.log*
+}
 
+
+# Handle commands.
 case "$1" in
-  tidy)      tidy ;;
-  build)     build ;;
-  *)         exit 0
+    start)               start       ;;
+    restart)             estart     ;;
+    stop)                stop        ;;
+    status)              status      ;;
+    build)               build       ;;
+    tidy)                tidy        ;;
+    update)              update      ;;
+    *)
 esac
