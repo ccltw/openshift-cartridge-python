@@ -11,9 +11,8 @@ Cartridge-Version: 0.1
 Cartridge-Vendor: ccltw
 Categories:
 - service
-- embedded
 - python
-- plugin
+- embedded
 Provides:
 - python-3.6.1
 - python
