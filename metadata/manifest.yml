@@ -1,0 +1,26 @@
+---
+Name: python
+Cartridge-Short-Name: PYTHON
+Display-Name: Python 3.6.1
+Description: 'Python 3.6.1'
+Version: '3.6.1'
+Versions:
+- '3.6.1'
+Website: https://github.com/ccltw/openshift-cartridge-python
+Cartridge-Version: 0.1
+Cartridge-Vendor: ccltw
+Categories:
+- embedded
+- python
+- plugin
+Provides:
+- python-3.6.1
+- python
+Scaling:
+  Min: 1
+  Max: -1
+Group-Overrides:
+- components:
+  - web_framework
+  - web_proxy
+  - cron
