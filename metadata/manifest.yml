@@ -10,6 +10,7 @@ Website: https://github.com/ccltw/openshift-cartridge-python
 Cartridge-Version: 0.1
 Cartridge-Vendor: ccltw
 Categories:
+- service
 - embedded
 - python
 - plugin
